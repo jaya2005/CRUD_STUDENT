@@ -19,6 +19,7 @@ db=mysql.connector.connect(
 
 def add_student():
     data=request.get_json()
+    print("Received data:", data)
     name=data.get('name')
     mark=data.get('mark')
     
@@ -100,4 +101,4 @@ def frontend():
 
 if __name__=="__main__":
     print("connection to db")
-    app.run()
+    app.run(debug=True)
